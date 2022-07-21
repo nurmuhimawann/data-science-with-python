@@ -42,3 +42,18 @@ y_pred = ifelse(predict >= 0.5, 1, 0)
 # result
 result = cbind(test_set, y_pred)
 View(result)
+
+# kinerja model
+# confussion matrix
+cm = table(test_set[,3], y_pred)
+cm
+
+
+# y_pred
+#    0  1
+# 0 69  8
+# 1 13 30
+
+# AUC
+y_pred_num = as.numeric(y_pred)
+colAUC(y_pred_num, test_set[,3], plotROC = TRUE)
