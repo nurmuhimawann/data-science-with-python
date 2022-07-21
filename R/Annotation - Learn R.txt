@@ -1,0 +1,28 @@
+Catatan:
+
+- kmeans
+clustering tidak didesain untuk melakukan prediksi masa depan.
+
+- time series
+yang perlu diperhatikan:
+1. time series hanya menggunakan data "waktu" dan "nilai"untuk training
+untuk dipakai melakukan prediksi nilai pada poin waktu selanjutnya;
+
+2. jika nilai yang diprediksi merupakan hasil formula atau rumus biasanya
+akurasi akan meningkat dengan cara memprediksi poin-poin yang merupakan
+komponen atau pembentuk nilai tersebut.
+
+3. Semakin jauh poin waktu yang akan diprediksi -> akurasi akan menurun jauh
+
+4.  prediksi bulanan/tahunan biasa memiliki data training yang sedikit -> memengaruhi akurasi
+
+5. Prediksi harian memiliki data training yang banyak, namun terkendala dengan
+tidak ada data saat akhir pekan dan libur.
+
+6. data yang sering bernilai 0 pada suatu periode akan memperburuk akurasi;
+
+7. data yang membedakan antara penyajian dengan kondisi nyata
+akan memperburuk akurasi.
+contoh:
+saldo rekening giro dapat menjadi minus, namun dalam
+penyajiannya informasi saldo minus selalu dianggap 0.
